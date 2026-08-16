@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Will Pruitt — Journalist</title>
+
+    <meta name="description"
+          content="Will Pruitt is an Indiana-based freelance journalist covering politics, law, public policy and the people affected by them.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+
+        :root {
+            --background: #f7f6f2;
+            --text: #171717;
+            --muted: #686868;
+            --line: #d8d6d0;
+            --accent: #8b2020;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            border-bottom: 1px solid var(--line);
+            padding: 24px 5vw;
+        }
+
+        nav {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: "Libre Baskerville", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO */
+
+        .hero {
+            max-width: 1250px;
+            margin: auto;
+            padding: 130px 5vw 110px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            max-width: 900px;
+            font-family: "Libre Baskerville", serif;
+            font-size: clamp(3.2rem, 8vw, 7rem);
+            line-height: 0.98;
+            letter-spacing: -0.06em;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin-top: 35px;
+            font-size: 1.2rem;
+            color: var(--muted);
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 14px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 21px;
+            border: 1px solid var(--text);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: 0.2s ease;
+        }
+
+        .button.primary {
+            background: var(--text);
+            color: var(--white);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SECTION */
+
+        section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 80px 5vw;
+        }
+
+        .section-heading {
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-family: "Libre Baskerville", serif;
+            font-size: 2rem;
+        }
+
+        .section-heading span {
+            color: var(--muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* STORY GRID */
+
+        .stories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .story {
+            background: var(--background);
+            padding: 38px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.2s ease;
+        }
+
+        .story:hover {
+            background: var(--white);
+        }
+
+        .story-category {
+            color: var(--accent);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .story h3 {
+            font-family: "Libre Baskerville", serif;
+            font-size: 1.65rem;
+            line-height: 1.25;
+            margin-top: 25px;
+        }
+
+        .story p {
+            color: var(--muted);
+            margin-top: 15px;
+        }
+
+        .story-meta {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+        }
+
+        .about-title {
+            font-family: "Libre Baskerville", serif;
+            font-size: 2rem;
+        }
+
+        .about-text {
+            max-width: 700px;
+            font-size: 1.15rem;
+        }
+
+        .about-text p + p {
+            margin-top: 20px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--text);
+            color: var(--white);
+            max-width: none;
+        }
+
+        .contact-inner {
+            max-width: 1250px;
+            margin: auto;
+            padding: 100px 5vw;
+        }
+
+        .contact h2 {
+            font-family: "Libre Baskerville", serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            max-width: 800px;
+            line-height: 1.05;
+        }
+
+        .contact p {
+            margin-top: 25px;
+            color: #c7c7c7;
+            max-width: 550px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 35px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+            padding-bottom: 4px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--text);
+            border-top: 1px solid #333;
+            color: #888;
+            padding: 25px 5vw;
+            font-size: 0.75rem;
+        }
+
+        footer div {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px 6vw;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                padding: 90px 6vw 80px;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 60px 6vw;
+            }
+
+            .stories {
+                grid-template-columns: 1fr;
+            }
+
+            .story {
+                padding: 28px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-text {
+                font-size: 1rem;
+            }
+
+            footer div {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">WILL PRUITT</div>
+
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div class="eyebrow">
+            Freelance Journalist · Indiana
+        </div>
+
+        <h1>
+            Reporting on the people and politics shaping Indiana.
+        </h1>
+
+        <p class="hero-description">
+            I cover politics, law, public policy and the issues
+            affecting young Hoosiers.
+        </p>
+
+        <div class="hero-links">
+            <a href="#work" class="button primary">
+                Read my work
+            </a>
+
+            <a href="#contact" class="button">
+                Get in touch
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- WORK -->
+
+    <section id="work">
+
+        <div class="section-heading">
+            <h2>Selected Work</h2>
+            <span>Reporting & Writing</span>
+        </div>
+
+        <div class="stories">
+
+            <article class="story">
+
+                <div>
+                    <div class="story-category">
+                        Politics
+                    </div>
+
+                    <h3>
+                        Your first published story will go here.
+                    </h3>
+
+                    <p>
+                        This space will become a short description
+                        of the story and why it matters.
+                    </p>
+                </div>
+
+                <div class="story-meta">
+                    COMING SOON
+                </div>
+
+            </article>
+
+
+            <article class="story">
+
+                <div>
+                    <div class="story-category">
+                        Public Policy
+                    </div>
+
+                    <h3>
+                        Another reported story can live here.
+                    </h3>
+
+                    <p>
+                        As you publish more work, your strongest
+                        reporting will appear here.
+                    </p>
+                </div>
+
+                <div class="story-meta">
+                    COMING SOON
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="section-heading">
+            <h2>About</h2>
+            <span>Will Pruitt</span>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-title">
+                An Indiana perspective.
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    I'm an Indiana-based freelance journalist interested
+                    in politics, law, public policy and the people affected
+                    by those institutions.
+                </p>
+
+                <p>
+                    My reporting focuses particularly on Indiana and the
+                    experiences of young Hoosiers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <div class="contact" id="contact">
+
+        <div class="contact-inner">
+
+            <h2>
+                Have a story, tip or assignment?
+            </h2>
+
+            <p>
+                I'm available for freelance reporting, features,
+                profiles and explanatory journalism.
+            </p>
+
+            <a href="mailto:YOUR-EMAIL-HERE@example.com">
+                YOUR-EMAIL-HERE@example.com
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <span>© 2026 Will Pruitt</span>
+        <span>Freelance Journalist · Indiana</span>
+    </div>
+
+</footer>
+
+</body>
+</html>
