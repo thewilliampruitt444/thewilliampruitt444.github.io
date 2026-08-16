@@ -1,531 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Will Pruitt — Journalist</title>
+  <title>Will Pruitt — Journalist</title>
 
-    <meta name="description"
-          content="Will Pruitt is an Indiana-based freelance journalist covering politics, law, public policy and the people affected by them.">
+  <meta name="description"
+        content="Will Pruitt is an Indianapolis-based student journalist and political science student covering politics, law, public policy and issues affecting young Hoosiers.">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-        :root {
-            --background: #f7f6f2;
-            --text: #171717;
-            --muted: #686868;
-            --line: #d8d6d0;
-            --accent: #8b2020;
-            --white: #ffffff;
-        }
+  <style>
+    :root {
+      --background: #f7f6f2;
+      --text: #171717;
+      --muted: #686868;
+      --line: #d8d6d0;
+      --accent: #8b2020;
+      --white: #ffffff;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            background: var(--background);
-            color: var(--text);
-            font-family: "DM Sans", sans-serif;
-            line-height: 1.6;
-        }
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
 
-        /* NAVIGATION */
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 5vw;
+    }
 
-        header {
-            border-bottom: 1px solid var(--line);
-            padding: 24px 5vw;
-        }
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        nav {
-            max-width: 1250px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .logo {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      color: var(--text);
+    }
 
-        .logo {
-            font-family: "Libre Baskerville", serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 32px;
-        }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
 
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
+    nav a:hover {
+      color: var(--accent);
+    }
 
-        nav a:hover {
-            color: var(--accent);
-        }
+    .hero {
+      max-width: 1250px;
+      margin: auto;
+      padding: 130px 5vw 110px;
+    }
 
-        /* HERO */
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
 
-        .hero {
-            max-width: 1250px;
-            margin: auto;
-            padding: 130px 5vw 110px;
-        }
+    h1 {
+      max-width: 1000px;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+    }
 
-        .eyebrow {
-            color: var(--accent);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            margin-bottom: 22px;
-        }
+    .hero-description {
+      max-width: 690px;
+      margin-top: 35px;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
 
-        h1 {
-            max-width: 900px;
-            font-family: "Libre Baskerville", serif;
-            font-size: clamp(3.2rem, 8vw, 7rem);
-            line-height: 0.98;
-            letter-spacing: -0.06em;
-            font-weight: 700;
-        }
+    .hero-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
 
-        .hero-description {
-            max-width: 650px;
-            margin-top: 35px;
-            font-size: 1.2rem;
-            color: var(--muted);
-        }
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border: 1px solid var(--text);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
 
-        .hero-links {
-            display: flex;
-            gap: 14px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
+    .button.primary {
+      background: var(--text);
+      color: var(--white);
+    }
 
-        .button {
-            display: inline-block;
-            padding: 13px 21px;
-            border: 1px solid var(--text);
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            transition: 0.2s ease;
-        }
+    .button:hover {
+      transform: translateY(-2px);
+    }
 
-        .button.primary {
-            background: var(--text);
-            color: var(--white);
-        }
+    section {
+      max-width: 1250px;
+      margin: auto;
+      padding: 80px 5vw;
+    }
 
-        .button:hover {
-            transform: translateY(-2px);
-        }
+    .section-heading {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 45px;
+    }
 
-        /* SECTION */
+    .section-heading h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 2rem;
+    }
 
-        section {
-            max-width: 1250px;
-            margin: auto;
-            padding: 80px 5vw;
-        }
+    .section-heading span {
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
-        .section-heading {
-            border-top: 1px solid var(--line);
-            padding-top: 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 45px;
-        }
+    .featured-card {
+      border: 1px solid var(--line);
+      padding: 55px;
+      background: var(--background);
+      transition: 0.2s ease;
+    }
 
-        .section-heading h2 {
-            font-family: "Libre Baskerville", serif;
-            font-size: 2rem;
-        }
+    .featured-card:hover {
+      background: var(--white);
+    }
 
-        .section-heading span {
-            color: var(--muted);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
+    .work-kicker {
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-        /* STORY GRID */
+    .featured-card h3 {
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-top: 20px;
+      max-width: 900px;
+    }
 
-        .stories {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
+    .award {
+      margin-top: 22px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
 
-        .story {
-            background: var(--background);
-            padding: 38px;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: 0.2s ease;
-        }
+    .work-description {
+      max-width: 760px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
 
-        .story:hover {
-            background: var(--white);
-        }
+    .read-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
 
-        .story-category {
-            color: var(--accent);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
-        }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+    }
 
-        .story h3 {
-            font-family: "Libre Baskerville", serif;
-            font-size: 1.65rem;
-            line-height: 1.25;
-            margin-top: 25px;
-        }
+    .about-title {
+      font-family: "Libre Baskerville", serif;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
 
-        .story p {
-            color: var(--muted);
-            margin-top: 15px;
-        }
+    .about-text {
+      max-width: 760px;
+      font-size: 1.12rem;
+    }
 
-        .story-meta {
-            margin-top: 30px;
-            font-size: 0.75rem;
-            color: var(--muted);
-        }
+    .about-text p + p {
+      margin-top: 20px;
+    }
 
-        /* ABOUT */
+    .contact {
+      background: var(--text);
+      color: var(--white);
+      max-width: none;
+    }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 80px;
-        }
+    .contact-inner {
+      max-width: 1250px;
+      margin: auto;
+      padding: 100px 5vw;
+    }
 
-        .about-title {
-            font-family: "Libre Baskerville", serif;
-            font-size: 2rem;
-        }
+    .contact h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      max-width: 850px;
+      line-height: 1.05;
+    }
 
-        .about-text {
-            max-width: 700px;
-            font-size: 1.15rem;
-        }
+    .contact p {
+      margin-top: 25px;
+      color: #c7c7c7;
+      max-width: 600px;
+    }
 
-        .about-text p + p {
-            margin-top: 20px;
-        }
+    .contact a {
+      display: inline-block;
+      margin-top: 35px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+      padding-bottom: 4px;
+    }
 
-        /* CONTACT */
+    footer {
+      background: var(--text);
+      border-top: 1px solid #333;
+      color: #888;
+      padding: 25px 5vw;
+      font-size: 0.75rem;
+    }
 
-        .contact {
-            background: var(--text);
-            color: var(--white);
-            max-width: none;
-        }
+    footer div {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
 
-        .contact-inner {
-            max-width: 1250px;
-            margin: auto;
-            padding: 100px 5vw;
-        }
+    @media (max-width: 700px) {
+      header {
+        padding: 20px 6vw;
+      }
 
-        .contact h2 {
-            font-family: "Libre Baskerville", serif;
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            max-width: 800px;
-            line-height: 1.05;
-        }
+      nav ul {
+        gap: 15px;
+      }
 
-        .contact p {
-            margin-top: 25px;
-            color: #c7c7c7;
-            max-width: 550px;
-        }
+      nav a {
+        font-size: 0.7rem;
+      }
 
-        .contact a {
-            display: inline-block;
-            margin-top: 35px;
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid white;
-            padding-bottom: 4px;
-        }
+      .hero {
+        padding: 90px 6vw 80px;
+      }
 
-        /* FOOTER */
+      .hero-description {
+        font-size: 1rem;
+      }
 
-        footer {
-            background: var(--text);
-            border-top: 1px solid #333;
-            color: #888;
-            padding: 25px 5vw;
-            font-size: 0.75rem;
-        }
+      section {
+        padding: 60px 6vw;
+      }
 
-        footer div {
-            max-width: 1250px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-        }
+      .featured-card {
+        padding: 30px;
+      }
 
-        /* MOBILE */
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
 
-        @media (max-width: 700px) {
+      .about-text {
+        font-size: 1rem;
+      }
 
-            header {
-                padding: 20px 6vw;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 0.7rem;
-            }
-
-            .hero {
-                padding: 90px 6vw 80px;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            section {
-                padding: 60px 6vw;
-            }
-
-            .stories {
-                grid-template-columns: 1fr;
-            }
-
-            .story {
-                padding: 28px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .about-text {
-                font-size: 1rem;
-            }
-
-            footer div {
-                flex-direction: column;
-                gap: 8px;
-            }
-        }
-    </style>
+      footer div {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <div class="logo">WILL PRUITT</div>
+  <nav>
+    <a class="logo" href="index.html">WILL PRUITT</a>
 
-        <ul>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
 
 <main>
 
-    <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">
+      Student Journalist · Indianapolis
+    </div>
 
-    <div class="hero">
+    <h1>
+      Reporting on the people and politics shaping Indiana.
+    </h1>
 
-        <div class="eyebrow">
-            Freelance Journalist · Indiana
-        </div>
+    <p class="hero-description">
+      I'm a political science student and writer focused on politics,
+      law, public policy and the institutions that shape public life,
+      with a particular interest in issues affecting young Hoosiers.
+    </p>
 
-        <h1>
-            Reporting on the people and politics shaping Indiana.
-        </h1>
+    <div class="hero-links">
+      <a href="#work" class="button primary">
+        Read my work
+      </a>
 
-        <p class="hero-description">
-            I cover politics, law, public policy and the issues
-            affecting young Hoosiers.
+      <a href="#contact" class="button">
+        Get in touch
+      </a>
+    </div>
+  </div>
+
+
+  <section id="work">
+
+    <div class="section-heading">
+      <h2>Selected Work</h2>
+      <span>Writing & Reporting</span>
+    </div>
+
+    <article class="featured-card">
+
+      <div class="work-kicker">
+        Political Theory · Award-Winning Essay
+      </div>
+
+      <h3>
+        Judgment in an Unreal World
+      </h3>
+
+      <div class="award">
+        Winner of the 2026 Winslow Prize in Political Theory
+        · Indiana University Indianapolis
+      </div>
+
+      <p class="work-description">
+        Using Hannah Arendt's account of manufactured unreality,
+        this essay examines how conspiracy politics can erode
+        democratic judgment by shifting trust away from evidence
+        and toward leader-centered certainty.
+      </p>
+
+      <a class="read-link"
+         href="writing/judgment-in-an-unreal-world.html">
+        Read essay →
+      </a>
+
+    </article>
+
+  </section>
+
+
+  <section id="about">
+
+    <div class="section-heading">
+      <h2>About</h2>
+      <span>Will Pruitt</span>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-title">
+        Politics, law and public life.
+      </div>
+
+      <div class="about-text">
+
+        <p>
+          Will Pruitt is an Indianapolis-based student journalist and
+          writer studying political science at Indiana University
+          Indianapolis. His interests include Indiana politics, law,
+          public policy, criminal justice and the institutions that
+          shape public life.
         </p>
 
-        <div class="hero-links">
-            <a href="#work" class="button primary">
-                Read my work
-            </a>
+        <p>
+          In 2026, Pruitt received IU Indianapolis's Winslow Prize in
+          Political Theory for his essay
+          <em>“Judgment in an Unreal World.”</em>
+        </p>
 
-            <a href="#contact" class="button">
-                Get in touch
-            </a>
-        </div>
+        <p>
+          His reporting focuses on making politics and public policy
+          understandable and relevant, with a particular interest in
+          how decisions made by governments and institutions affect
+          young Hoosiers and their communities.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="contact" id="contact">
+
+    <div class="contact-inner">
+
+      <h2>
+        Have a story, tip or assignment?
+      </h2>
+
+      <p>
+        I'm interested in freelance reporting, features,
+        political and public-policy coverage, explanatory journalism
+        and stories about Indiana communities.
+      </p>
+
+      <a href="mailto:YOUR-EMAIL-HERE@example.com">
+        YOUR-EMAIL-HERE@example.com
+      </a>
 
     </div>
 
-
-    <!-- WORK -->
-
-    <section id="work">
-
-        <div class="section-heading">
-            <h2>Selected Work</h2>
-            <span>Reporting & Writing</span>
-        </div>
-
-        <div class="stories">
-
-            <article class="story">
-
-                <div>
-                    <div class="story-category">
-                        Politics
-                    </div>
-
-                    <h3>
-                        Your first published story will go here.
-                    </h3>
-
-                    <p>
-                        This space will become a short description
-                        of the story and why it matters.
-                    </p>
-                </div>
-
-                <div class="story-meta">
-                    COMING SOON
-                </div>
-
-            </article>
-
-
-            <article class="story">
-
-                <div>
-                    <div class="story-category">
-                        Public Policy
-                    </div>
-
-                    <h3>
-                        Another reported story can live here.
-                    </h3>
-
-                    <p>
-                        As you publish more work, your strongest
-                        reporting will appear here.
-                    </p>
-                </div>
-
-                <div class="story-meta">
-                    COMING SOON
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="section-heading">
-            <h2>About</h2>
-            <span>Will Pruitt</span>
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-title">
-                An Indiana perspective.
-            </div>
-
-            <div class="about-text">
-
-                <p>
-                    I'm an Indiana-based freelance journalist interested
-                    in politics, law, public policy and the people affected
-                    by those institutions.
-                </p>
-
-                <p>
-                    My reporting focuses particularly on Indiana and the
-                    experiences of young Hoosiers.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <div class="contact" id="contact">
-
-        <div class="contact-inner">
-
-            <h2>
-                Have a story, tip or assignment?
-            </h2>
-
-            <p>
-                I'm available for freelance reporting, features,
-                profiles and explanatory journalism.
-            </p>
-
-            <a href="mailto:YOUR-EMAIL-HERE@example.com">
-                YOUR-EMAIL-HERE@example.com
-            </a>
-
-        </div>
-
-    </div>
+  </div>
 
 </main>
 
 
 <footer>
-
-    <div>
-        <span>© 2026 Will Pruitt</span>
-        <span>Freelance Journalist · Indiana</span>
-    </div>
-
+  <div>
+    <span>© 2026 Will Pruitt</span>
+    <span>Journalist · Indianapolis</span>
+  </div>
 </footer>
 
 </body>
