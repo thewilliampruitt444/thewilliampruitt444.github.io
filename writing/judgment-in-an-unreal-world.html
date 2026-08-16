@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Judgment in an Unreal World — Will Pruitt</title>
+
+  <meta name="description"
+        content="Winner of the 2026 Winslow Prize in Political Theory. An essay by Will Pruitt on Hannah Arendt, conspiracy politics, evidence and democratic judgment.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f7f6f2;
+      --ink: #171717;
+      --muted: #686868;
+      --line: #d8d6d0;
+      --accent: #8b2020;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 24px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Libre Baskerville", serif;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    nav ul a:hover {
+      color: var(--accent);
+    }
+
+    /* ARTICLE HEADER */
+
+    .article-header {
+      max-width: 1050px;
+      margin: auto;
+      padding: 110px 5vw 70px;
+    }
+
+    .category {
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+      margin: 0;
+      max-width: 1000px;
+    }
+
+    .dek {
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 800px;
+      margin: 35px 0;
+    }
+
+    .byline {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+      font-size: .85rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .award {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ARTICLE */
+
+    .article-body {
+      max-width: 720px;
+      margin: auto;
+      padding: 70px 5vw 100px;
+    }
+
+    .article-body p {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.08rem;
+      line-height: 1.9;
+      margin: 0 0 1.7em;
+    }
+
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-family: "Libre Baskerville", serif;
+      font-size: 4.5rem;
+      line-height: .8;
+      padding-right: 10px;
+      padding-top: 10px;
+      color: var(--accent);
+    }
+
+    blockquote {
+      margin: 65px -80px;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    /* WORKS CITED */
+
+    .works {
+      border-top: 1px solid var(--line);
+      margin-top: 80px;
+      padding-top: 40px;
+    }
+
+    .works h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.6rem;
+    }
+
+    .works p {
+      font-family: "DM Sans", sans-serif;
+      font-size: .82rem;
+      line-height: 1.65;
+      padding-left: 25px;
+      text-indent: -25px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--ink);
+      color: #aaa;
+      padding: 45px 5vw;
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      font-size: .75rem;
+    }
+
+    .footer-inner a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav ul {
+        gap: 13px;
+      }
+
+      nav ul a {
+        font-size: .65rem;
+      }
+
+      .article-header {
+        padding-top: 75px;
+      }
+
+      .byline {
+        flex-direction: column;
+      }
+
+      .article-body {
+        padding-top: 50px;
+      }
+
+      .article-body p {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      blockquote {
+        margin: 50px 0;
+        font-size: 1.4rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<header>
+
+  <nav>
+
+    <a class="logo" href="../index.html">
+      WILL PRUITT
+    </a>
+
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+  <div class="article-header">
+
+    <div class="category">
+      Political Theory · Essay
+    </div>
+
+    <h1>
+      Judgment in an Unreal World
+    </h1>
+
+    <p class="dek">
+      How manufactured unreality can erode democratic judgment
+      by separating trust from evidence and attaching it to
+      leader-centered certainty.
+    </p>
+
+    <div class="byline">
+
+      <span>
+        By <strong>Will Pruitt</strong> · April 27, 2026
+      </span>
+
+      <span class="award">
+        Winner of the 2026 Winslow Prize in Political Theory
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <article class="article-body">
+
+    <p>
+      A democracy does not weaken only when votes are stolen or
+      courts are captured. It also weakens when citizens lose the
+      common world in which evidence can still mean something.
+      Hannah Arendt’s <em>The Origins of Totalitarianism</em> is
+      useful here not because recent American politics is identical
+      to the totalitarian movements she studied, but because she
+      diagnoses a condition in which reality itself becomes unstable.
+      In an “ever-changing, incomprehensible world,” Arendt writes,
+      the masses could “believe everything and nothing” and think
+      that “everything was possible and that nothing was true” (382).
+      That sentence names the danger at the center of recent conspiracy
+      politics. The problem is not simply that falsehood circulates.
+      The problem is that a top-down system of manufactured unreality
+      breaks the authority of evidence, redirects trust toward
+      leader-centered certainty, and weakens the democratic habit of
+      judgment before remaking citizens into followers.
+    </p>
+
+    <p>
+      Arendt’s insight is that organized unreality does not work like
+      an ordinary lie. A lie still depends on truth in a backward way;
+      it hides reality because reality still has force. Manufactured
+      unreality is more corrosive because it tries to make truth lose
+      public authority altogether. Arendt describes totalitarian
+      movements as establishing “the fictitious world through
+      consistent lying” (382). The phrase matters because the lie is
+      no longer isolated. It becomes a world. Inside that world,
+      evidence does not correct belief in the ordinary way, because
+      the source of evidence has already been discredited before it
+      speaks. A factual rebuttal can then be treated not as a
+      correction but as one more sign that the hidden enemy is
+      working. This is why conspiracy politics is stronger than
+      simple deception. It does not only ask citizens to accept one
+      false claim. It trains them to distrust the tools by which
+      claims are judged. Once that happens, the question is no longer,
+      “What does the evidence show?” It becomes, “Whose reality do I
+      belong to?”
+    </p>
+
+    <!-- We will add the remainder of the essay next. -->
+
+    <blockquote>
+      “The count loses authority; leader-centered certainty takes its place.”
+    </blockquote>
+
+    <!-- WORKS CITED WILL GO HERE -->
+
+  </article>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <span>© 2026 Will Pruitt</span>
+
+    <a href="../index.html">
+      Back to WillPruitt.com →
+    </a>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
