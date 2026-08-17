@@ -244,8 +244,21 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: minmax(220px, 0.85fr) minmax(180px, 0.8fr) 2fr;
       gap: 80px;
+    }
+
+    .about-photo {
+      margin: 0;
+    }
+
+    .about-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 42%;
+      border: 1px solid var(--line);
     }
 
     .about-title {
@@ -290,9 +303,15 @@
       max-width: 600px;
     }
 
+    .contact-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
     .contact a {
       display: inline-block;
-      margin-top: 35px;
       color: white;
       text-decoration: none;
       border-bottom: 1px solid white;
@@ -527,6 +546,11 @@
 
     <div class="about-grid">
 
+      <figure class="about-photo">
+        <img src="IMG_1330.jpeg"
+             alt="Portrait of Will Pruitt seated in a warmly lit interior">
+      </figure>
+
       <div class="about-title">
         Politics, law and public life.
       </div>
@@ -579,9 +603,21 @@
         and stories about Indiana communities.
       </p>
 
-      <a href="mailto:willpruittjournalism@gmail.com">
-        willpruittjournalism@gmail.com
-      </a>
+      <div class="contact-links">
+        <a href="mailto:willpruittjournalism@gmail.com">
+          Email
+        </a>
+
+        <a href="https://www.linkedin.com/in/william-pruitt-534056201"
+           target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+
+        <a href="https://www.instagram.com/thewilliampruitt/"
+           target="_blank" rel="noopener">
+          Instagram @thewilliampruitt
+        </a>
+      </div>
 
     </div>
 
@@ -610,3 +646,4 @@
 
 </body>
 </html>
+
