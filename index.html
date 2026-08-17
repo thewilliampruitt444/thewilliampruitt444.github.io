@@ -11,10 +11,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
   <style>
+
     :root {
       --background: #f7f6f2;
       --text: #171717;
@@ -82,6 +84,8 @@
       color: var(--accent);
     }
 
+    /* HERO */
+
     .hero {
       max-width: 1250px;
       margin: auto;
@@ -142,6 +146,8 @@
       transform: translateY(-2px);
     }
 
+    /* SECTIONS */
+
     section {
       max-width: 1250px;
       margin: auto;
@@ -169,6 +175,8 @@
       letter-spacing: 0.08em;
     }
 
+    /* WORK CARDS */
+
     .featured-card {
       border: 1px solid var(--line);
       padding: 55px;
@@ -178,6 +186,10 @@
 
     .featured-card:hover {
       background: var(--white);
+    }
+
+    .featured-card + .featured-card {
+      margin-top: 24px;
     }
 
     .work-kicker {
@@ -223,6 +235,13 @@
       text-transform: uppercase;
     }
 
+    .read-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ABOUT */
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -243,6 +262,8 @@
     .about-text p + p {
       margin-top: 20px;
     }
+
+    /* CONTACT */
 
     .contact {
       background: var(--text);
@@ -278,6 +299,8 @@
       padding-bottom: 4px;
     }
 
+    /* FOOTER */
+
     footer {
       background: var(--text);
       border-top: 1px solid #333;
@@ -293,7 +316,10 @@
       justify-content: space-between;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
+
       header {
         padding: 20px 6vw;
       }
@@ -336,26 +362,39 @@
         gap: 8px;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
 <header>
+
   <nav>
-    <a class="logo" href="index.html">WILL PRUITT</a>
+
+    <a class="logo" href="/">
+      WILL PRUITT
+    </a>
 
     <ul>
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
+
 </header>
+
 
 <main>
 
+
+  <!-- HERO -->
+
   <div class="hero">
+
     <div class="eyebrow">
       Student Journalist · Indianapolis
     </div>
@@ -371,6 +410,7 @@
     </p>
 
     <div class="hero-links">
+
       <a href="#work" class="button primary">
         Read my work
       </a>
@@ -378,16 +418,62 @@
       <a href="#contact" class="button">
         Get in touch
       </a>
+
     </div>
+
   </div>
 
+
+
+  <!-- SELECTED WORK -->
 
   <section id="work">
 
     <div class="section-heading">
-      <h2>Selected Work</h2>
-      <span>Writing & Reporting</span>
+
+      <h2>
+        Selected Work
+      </h2>
+
+      <span>
+        Writing & Reporting
+      </span>
+
     </div>
+
+
+    <!-- INDIANAPOLIS BUDGET -->
+
+    <article class="featured-card">
+
+      <div class="work-kicker">
+        Analysis · Indianapolis · August 2026
+      </div>
+
+      <h3>
+        A $1.9 Billion Budget That Fails to See Young People
+      </h3>
+
+      <div class="award">
+        Indianapolis 2027 Budget Analysis
+      </div>
+
+      <p class="work-description">
+        Indianapolis can explain its plans for roads, police,
+        facilities and grants. This analysis examines why the city's
+        commitments to young residents are much harder to identify.
+      </p>
+
+      <a class="read-link"
+         href="reporting/indianapolis-budget-young-people.html">
+        Read analysis →
+      </a>
+
+    </article>
+
+
+
+    <!-- WINSLOW ESSAY -->
 
     <article class="featured-card">
 
@@ -421,18 +507,30 @@
   </section>
 
 
+
+  <!-- ABOUT -->
+
   <section id="about">
 
     <div class="section-heading">
-      <h2>About</h2>
-      <span>Will Pruitt</span>
+
+      <h2>
+        About
+      </h2>
+
+      <span>
+        Will Pruitt
+      </span>
+
     </div>
+
 
     <div class="about-grid">
 
       <div class="about-title">
         Politics, law and public life.
       </div>
+
 
       <div class="about-text">
 
@@ -464,6 +562,9 @@
   </section>
 
 
+
+  <!-- CONTACT -->
+
   <div class="contact" id="contact">
 
     <div class="contact-inner">
@@ -477,10 +578,10 @@
         political and public-policy coverage, explanatory journalism
         and stories about Indiana communities.
       </p>
-      
-<a href="mailto:willpruittjournalism@gmail.com">
-  willpruittjournalism@gmail.com
-</a>
+
+      <a href="mailto:willpruittjournalism@gmail.com">
+        willpruittjournalism@gmail.com
+      </a>
 
     </div>
 
@@ -489,12 +590,23 @@
 </main>
 
 
+
 <footer>
+
   <div>
-    <span>© 2026 Will Pruitt</span>
-    <span>Journalist · Indianapolis</span>
+
+    <span>
+      © 2026 Will Pruitt
+    </span>
+
+    <span>
+      Journalist · Indianapolis
+    </span>
+
   </div>
+
 </footer>
+
 
 </body>
 </html>
